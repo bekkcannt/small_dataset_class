@@ -1,0 +1,21 @@
+import numpy as np
+import pandas as pd
+
+Code=['A','B','C']
+classes=list()
+
+np.random.seed(0)
+
+for i in range(40):
+  classes.append(Code[np.random.randint(3)])
+
+score1=np.random.randint(100,size=(len(classes)))
+score2=np.random.randint(100,size=(len(classes)))
+
+df1=pd.DataFrame()
+
+df1['Classes']=classes
+df1['Exam Score_1']=score1
+df1['Exam Score_2']=score2
+
+df1.index=np.arange(len(classes))
